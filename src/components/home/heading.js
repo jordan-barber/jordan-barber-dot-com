@@ -1,0 +1,51 @@
+import React from "react"
+import styled from "styled-components";
+import background from './me.jpeg';
+
+const Container = styled.div`
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+`;
+
+const Me = styled.div`
+  background-image: url("${background}");
+  background-size: cover;
+  height: 139px;
+  width: 139px;
+  border-radius: 50%;
+  opacity: 0.67;
+  align-self: center;
+  justify-self: center;
+  margin: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+`;
+
+const Title = styled.h3`
+  opacity: 0.75;
+  font-family: OpenSans;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 596px;
+  max-height: 54px;
+`;
+
+const Heading = () => {
+    return (
+        <Container>
+            <Me />
+            <Title>
+                Hi, I’m Jordan a Software Engineer based in sunny Sheffield.
+                Currently working for Sky Betting and Gaming.
+            </Title>
+        </Container>
+    )
+}
+
+export default Heading
