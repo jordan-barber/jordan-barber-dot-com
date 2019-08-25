@@ -19,6 +19,17 @@ const Me = styled.div`
   justify-self: center;
   margin: auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease-in-out;
+  
+  :hover {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    height: 100px;
+    width: 100px;
+  }
 `;
 
 const Title = styled.h3`
@@ -34,6 +45,9 @@ const Title = styled.h3`
   color: #ffffff;
   max-width: 596px;
   max-height: 54px;
+  @media only screen and (max-width: 768px) {
+    font-size: 18px; 
+  }
 `;
 
 const Heading = () => {
