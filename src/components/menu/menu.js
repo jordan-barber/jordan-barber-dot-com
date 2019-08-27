@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components";
 import PropTypes from "prop-types";
 import { IoIosClose } from "react-icons/io"
 
+// TODO - Make this much nicer on a smaller screen
+
 const MenuContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -48,6 +50,11 @@ const MenuItems = styled.ul`
   text-decoration: none;
   list-style: none;
   text-align: center;
+  padding: 0;
+  
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -80,6 +87,12 @@ const IconContainer = styled.div`
   :hover {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    font-size: 32px;
+    top: 20px;
+    right: 20px;
   }
 `;
 

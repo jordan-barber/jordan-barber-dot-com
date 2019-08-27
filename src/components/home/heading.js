@@ -45,8 +45,9 @@ const Title = styled.h3`
   color: #ffffff;
   max-width: 596px;
   max-height: 54px;
+  
   @media only screen and (max-width: 768px) {
-    font-size: 18px; 
+    font-size: 12px; 
   }
 `;
 
