@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from './../../../assets/logo.svg';
 import Menu from './../../../assets/menu.svg';
+import PropTypes from 'prop-types';
 
 const Head = styled.div`
   width: 100%;
@@ -11,13 +12,30 @@ const Head = styled.div`
   align-items: center;
 `;
 
-const Header = () => (
+const MenuContainer = styled.div`
+  cursor: pointer;
+  opacity: .6;
+  transition: opacity 0.5s ease-in-out;
+  
+  :hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+`;
+
+const Header = (props) => (
     <>
         <Head>
             <Logo />
-            <Menu />
+            <MenuContainer>
+                <Menu onClick={props.toggleMenu} />
+            </MenuContainer>
         </Head>
     </>
 );
+
+Header.propTypes = {
+    toggleMenu: PropTypes.func.isRequired
+}
 
 export default Header;

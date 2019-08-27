@@ -13,6 +13,7 @@ import styled from "styled-components";
 import Header from "./header/header"
 import "./layout.css"
 import Footer from "./footer";
+import Menu from "./menu/menu";
 
 const Main = styled.div`
   background-color: #1d1d1d;
@@ -23,7 +24,7 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-const Layout = ({ children }) => {
+class Layout extends React.Component{
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -34,15 +35,39 @@ const Layout = ({ children }) => {
   //   }
   // `) // TODO - Use this for SEO bits and bobs.
 
-  return (
+    constructor(props) {
+        super(props);
 
-      <Main>
-          <Header />
-          {children}
-          <Footer />
-      </Main>
+        this.state = {
+            showMenu: false
+        }
 
-  )
+        this.toggleMenu = this.toggleMenu.bind(this);
+    }
+
+    toggleMenu() {
+        const { showMenu } = this.state;
+
+        this.setState({showMenu: !showMenu});
+    }
+
+    render() {
+        const { children } = this.props;
+        const { showMenu } = this.state;
+
+        console.log('***** ' + showMenu)
+
+        return (
+            <Main>
+                <Header toggleMenu={this.toggleMenu} />
+                {showMenu &&
+                    <Menu isToggled={showMenu} toggleMenu={this.toggleMenu}/>
+                }
+                {children}
+                <Footer/>
+            </Main>
+        )
+    }
 }
 
 Layout.propTypes = {
