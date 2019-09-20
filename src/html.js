@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import './components/layout.css';
+import "./components/layout.css"
 
 export default function HTML(props) {
   return (
@@ -24,7 +24,7 @@ export default function HTML(props) {
           key={`body`}
           id="___gatsby"
           style={{
-            height: '100%'
+            height: "100%",
           }}
           dangerouslySetInnerHTML={{ __html: props.body }}
         />

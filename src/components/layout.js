@@ -8,12 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby" // TODO - See below todo for SEO.
-import styled from "styled-components";
+import styled from "styled-components"
 
 import Header from "./header/header"
 import "./layout.css"
-import Footer from "./footer";
-import Menu from "./menu/menu";
+import Footer from "./footer"
+import Menu from "./menu/menu"
 
 const Main = styled.div`
   background-color: #1d1d1d;
@@ -22,9 +22,9 @@ const Main = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-`;
+`
 
-class Layout extends React.Component{
+class Layout extends React.Component {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -35,39 +35,35 @@ class Layout extends React.Component{
   //   }
   // `) // TODO - Use this for SEO bits and bobs.
 
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props)
 
-        this.state = {
-            showMenu: false
-        }
-
-        this.toggleMenu = this.toggleMenu.bind(this);
+    this.state = {
+      showMenu: false,
     }
 
-    toggleMenu() {
-        const { showMenu } = this.state;
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
 
-        this.setState({showMenu: !showMenu});
-    }
+  toggleMenu() {
+    const { showMenu } = this.state
 
-    render() {
-        const { children } = this.props;
-        const { showMenu } = this.state;
+    this.setState({ showMenu: !showMenu })
+  }
 
-        console.log('***** ' + showMenu)
+  render() {
+    const { children } = this.props
+    const { showMenu } = this.state
 
-        return (
-            <Main>
-                <Header toggleMenu={this.toggleMenu} />
-                {showMenu &&
-                    <Menu isToggled={showMenu} toggleMenu={this.toggleMenu}/>
-                }
-                {children}
-                <Footer/>
-            </Main>
-        )
-    }
+    return (
+      <Main>
+        <Header toggleMenu={this.toggleMenu} />
+        <Menu isToggled={showMenu} toggleMenu={this.toggleMenu} />
+        {children}
+        <Footer />
+      </Main>
+    )
+  }
 }
 
 Layout.propTypes = {
