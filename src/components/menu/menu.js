@@ -18,7 +18,7 @@ const MenuContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: ${props => (props.isToggled ? 1 : 0)};
+  z-index: ${props => (props.isToggled ? 1 : -1)};
   opacity: ${props => (props.isToggled ? 1 : 0)};
   transition: all 1s linear;
 `

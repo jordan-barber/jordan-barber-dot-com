@@ -60,7 +60,6 @@ class Layout extends React.Component {
         <Header toggleMenu={this.toggleMenu} />
         <Menu isToggled={showMenu} toggleMenu={this.toggleMenu} />
         {children}
-        <Footer />
       </Main>
     )
   }

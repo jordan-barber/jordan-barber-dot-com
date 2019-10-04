@@ -17,6 +17,9 @@ const Social = styled.div`
   display: flex;
   flex-direction: row;
   transition: opacity 0.25s ease-in-out; // TODO - Fix this bug, all of the socials hover at the same time.
+  @media only screen and (max-width: 1024px) {
+    justify-content: center;
+  }
 
   :hover {
     transition: opacity 0.25s ease-in-out;
