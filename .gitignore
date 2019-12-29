@@ -71,3 +71,4 @@ yarn-error.log
 # IDE
 .idea/
 jordan-barber-io.iml
+./foo
