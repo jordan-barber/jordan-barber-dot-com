@@ -19,7 +19,7 @@ const Title = styled.h1`
   padding: 0;
   margin: 0;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
     font-size: 22px;
   }
 `;
@@ -29,10 +29,7 @@ const SubHeading = styled.h3`
   color: #ffffff;
   margin: 0;
 
-  @media only screen
-    and (device-width: 414px)
-    and (device-height: 896px)
-    and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
         display: none;
     }
 `;
@@ -48,10 +45,7 @@ const GridItemContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
 
-  @media only screen
-    and (device-width: 414px)
-    and (device-height: 896px)
-    and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
         flex-direction: column;
   }
 `;
@@ -65,10 +59,7 @@ const GridItem = styled.div`
   max-width: 400px;
   font-weight: 300;
 
-  @media only screen
-    and (device-width: 414px)
-    and (device-height: 896px)
-    and (-webkit-device-pixel-ratio: 3) {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
         padding: 0;
         margin-top: 48px;
         text-align: center;
