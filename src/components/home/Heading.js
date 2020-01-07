@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import background from "./me.jpeg"
+import React from 'react';
+import styled from 'styled-components';
+import background from './me.jpeg';
 
 const Container = styled.div`
   align-self: center;
   justify-self: center;
   margin: auto;
-`
+`;
 
 const Me = styled.div`
   background-image: url("${background}");
@@ -30,7 +30,7 @@ const Me = styled.div`
     height: 100px;
     width: 100px;
   }
-`
+`;
 
 const Title = styled.h3`
   opacity: 0.75;
@@ -49,18 +49,18 @@ const Title = styled.h3`
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
-`
+`;
 
 const Heading = () => {
-  return (
-    <Container>
-      <Me />
-      <Title>
+    return (
+        <Container>
+            <Me />
+            <Title>
         Hi, I’m Jordan a Software Engineer based in sunny Sheffield. Currently
         working for Sky Betting and Gaming.
-      </Title>
-    </Container>
-  )
-}
+            </Title>
+        </Container>
+    );
+};
 
-export default Heading
+export default Heading;
