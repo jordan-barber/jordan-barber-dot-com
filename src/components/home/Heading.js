@@ -34,7 +34,7 @@ const Me = styled.div`
 
 const Title = styled.h3`
   opacity: 0.75;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
