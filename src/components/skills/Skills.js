@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   margin-top: 80px;
@@ -45,7 +44,7 @@ const GridItemContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
 
-  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 2) {
+  @media only screen and (max-width: 600px) {
         flex-direction: column;
   }
 `;
